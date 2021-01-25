@@ -1,0 +1,218 @@
+        .clearfix{clear:both;}
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 25px;
+            color: #2c2c2c;
+            margin: auto;
+            width: 90%;
+        }
+        h1 {
+            font-weight: bold;
+            font-size: 32px;
+            color: #1d1d1d;
+            padding-left: 10px;
+        }
+        .Move {
+            padding-left: 10px;
+        }
+        .reg {
+            font-weight: 400;
+        }
+        .place {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .place > {
+            width: 50%;
+        }
+        #iconsPlace {
+            background: url(sun.svg) no-repeat center center;
+            width: 32px;
+            height: 32px;
+        }
+        section {
+            margin: 10%;
+            margin-top: 35px;
+        }
+        #bgantennaIMG {
+            background: url(backgroundantenn.svg) no-repeat center center;
+            width: 600px;
+            height: 600px; 
+            display: block;
+            position: absolute;
+        }
+        #antennaIMG {
+            width: 295px;
+            height: 518px;
+            position: absolute;
+            top: 43px;
+            left: 170px;
+        }
+        #groundIMG {
+            width: 490px;
+            height: 15px;
+            position: absolute;
+            left:106px;
+            top: 586px;
+        }
+        .placeHeight, #ATMHeight {
+            width: 600px;
+            height: 9px;
+            position: absolute;
+            display: flex;
+        }
+        .placeHeight {
+            left:10px;
+            top: 585px;
+        }
+        #ATMHeight {
+            left:10px;
+            top: 40px;
+        }
+        .dash {
+            height: 3px;
+            width: 8px;
+            position: absolute;
+            top: 3px;
+        }
+        .placeHeight p, #ATMheightNum {
+            line-height: 9px;
+            position: absolute;
+            left: 20px;
+            font-weight: 400;
+            color: #1d1d1d;
+        }
+        #heightIMG {
+            width: 500px;
+            height: 9px;
+            position: absolute;
+            left: 82px;
+        }
+        #ATMheightIMG {
+            width: 450px;
+            height: 9px;
+            position: absolute;
+            left: 132px;
+        }
+        .icon {
+            width: 15px;
+            height: 15px;
+        }
+        #Azimuth {
+            background: url(azimuth.svg) no-repeat center center;
+            width: 20px;
+            height: 30px;
+        }
+        #TiltAngle {
+            background: url(titleangle.svg) no-repeat center center;
+            width: 20px;
+            height: 25px;
+        }
+        #MountHeight {
+            background: url(mountheight.svg) no-repeat center center;
+            width: 20px;
+            height: 20px;
+            left: 0px;
+        }
+        .place.generation {
+            height: 44px;
+            align-items: flex-end;
+        }
+        .place.generation div {
+            width: 70px;
+            height: 45px;
+            background-color: #EAEAEA;
+            color: white;
+            text-align: center;
+            line-height: 45px;
+            margin-left: 3px;
+            font-weight: bold;
+        }
+        .place.generation div:nth-child(3) {
+            width: 73px;
+        }
+        #dotsSpace {
+            height: 57px;
+            position: relative;
+            width: 295px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+        }
+        #dotsSpace div {
+            width: 15px;
+            height: 15px;
+            background-color: #00C65C;
+            border-radius: 50%;
+            margin: 5px;
+            cursor: pointer;
+            opacity: 0.3;
+        }
+
+        .place.bsNameSpace {
+            height: 50px;
+            align-items: center;
+        }
+        .place.sector {
+            align-items: center;
+        }
+        #sectorAntenn {
+            width: 100px;
+            height: 80px;
+            position: relative;
+        }
+        svg {
+            width: 80px;
+            height: 80px;
+        }
+        path:hover {
+            cursor: pointer;
+        }
+        #_180 {
+            transform: rotate(0deg) scale(0.7);
+            position: absolute;
+            left: 0px;
+        }
+        #_120 {
+            transform: rotate(60deg) scale(0.7);
+            position: absolute;
+            bottom: 9px;
+            left: 30px;
+        }
+        #_60 {
+            transform: rotate(120deg) scale(0.7);
+            position: absolute;
+            left: 52.5px;;
+            bottom: -13px;
+        }
+        #sectorNUM {
+            width: 150px;
+            height: 406px;
+        }
+        #sectorNUM p {
+            line-height: 30px;
+        }
+        #sectorNUM > p:nth-child(1) {
+            margin-top: 126px;
+        }
+        .column {
+            flex-direction: column;
+        }
+        .antenns {
+            width: 27px;
+            height: 51px;
+            background-color: rebeccapurple;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .place.antenn {
+            width: 166px;
+            height: 51px;
+            position: absolute;
+            left: 225px;
+            bottom: 7px;
+        }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='reset.css'>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src='site.json' id='json'></script>
+</head>
+<body>
+    <section class='ploshadkaAntenn'>
+        <div v-bind:value='readJSON'></div>
+        <div class='place'><h1>Площадка {{ name }}</h1>
+            <div id='iconsPlace'></div>
+        </div>
+        <div class="place">
+            <p class='reg Move'>№ {{ siteNumber }} {{ siteAddress[2] }}, {{ siteAddress[3] }}</p> <p class='reg'>{{ latitude }}</p>
+        </div>
+        <div class="place">
+            <p class='Move'>{{ siteAddress[0] }}, {{ siteAddress[1] }}</p> <p class='reg'>{{ longitude }}</p>
+        </div>
+        <div class='place main'>
+            <div id='bgantennaIMG'>
+                <img id='antennaIMG' src='svg/baseantenn.svg'>
+                <div id='ATMHeight'><img class='dash' src='svg/dash.svg'><p id='ATMheightNum'>{{ heightATM }} м ATM</p> <img id='ATMheightIMG' src='svg/height.svg'></div>
+                <div v-for='(newAntenn, i) in newAntenns'  class='placeHeight'><img class='dash' src='svg/dash.svg'><p id='heightNum'>{{ heightMount }} м</p> <img id='heightIMG' src='svg/height.svg'>
+                    <div class='place antenn'  ><div class='antenns' v-for='(r, index) in newAntenn' v-bind:id='setID(r)' v-on:click="selectSector($event)">
+                        </div></div>
+                </div>
+                <img id='groundIMG' src='svg/ground.svg'>
+            </div>
+            <div class='clearfix'></div>
+            <div class='sector'>
+                <div id='dotsSpace' ><div class='dot' v-bind:id='d' v-for='d in bsDots' v-on:click="select($event);"></div></div>
+                <div class='place bsNameSpace'>
+                    <p class='reg'>{{ bsName }}</p> <p>{{idDots}}/{{bsDots}}</p>
+                </div>
+                <div class="place sector">
+                    <div class='column'>
+                    <div id='sectorAntenn' v-for='d in threeSectorAmount'>
+                            <svg  id='_180'>
+                                <path class='svg'  id='0' d='M 10 70 H 70 70 L 39 19 Q 10 36 10 70' stroke="#eaeaea" fill="#eaeaea" v-on:click="selectSector($event)"/>
+                            </svg>
+                            <svg  id='_120'>
+                                <path class='svg' id='1' d='M 10 70 H 70 70 L 39 19 Q 10 36 10 70' stroke="#eaeaea" fill="#eaeaea" v-on:click="selectSector($event);"/>
+                            </svg>
+                            <svg  id='_60'>
+                                <path class='svg' id='2' d='M 10 70 H 70 70 L 39 19 Q 10 36 10 70' stroke="#eaeaea" fill="#eaeaea" v-on:click="selectSector($event)"/>
+                            </svg>
+                                                     
+                    </div> 
+                    </div>
+                    <div id='sectorNUM'><p>Сектор {{ sectorNum }}</p>
+                    <div class='place'>
+                        <p class='icon' id='Azimuth'></p><p>{{ azimuth }} &deg;</p>
+                    </div>
+                    <div class='place'>
+                        <p class='icon' id='TiltAngle'></p><p>{{ tiltAngle }} &deg;</p>
+                    </div>
+                    <div class='place'>
+                        <p class='icon' id='MountHeight'></p><p>{{ mountHeight }} m</p>
+                    </div>
+                    </div>
+                </div>
+                <div class='place generation'>
+                    <div id='2G'>2G</div>
+                    <div id='3G'>3G</div>
+                    <div id='LTE'>LTE</div>
+                    <div id='5G'>5G</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
